@@ -37,8 +37,12 @@ write.csv(Iris, "/Users/mahamadou.camara/Library/CloudStorage/OneDrive-Karolinsk
 
 Iris_table <- read.csv("/Users/mahamadou.camara/Library/CloudStorage/OneDrive-KarolinskaInstitutet/Documents/Courses/Intermediate_R_Data_Science_and_Visualization_Techniques_beyong_base_R/Assignment_day_1/Assignement_1_Iris_project_day1/data/Iris.csv")
 
-ggpairs(Iris_table, aes(color = Species))
+Figure1 <- ggpairs(Iris_table, aes(color = Species))
 
 renv::snapshot()
+
+pdf(file = "/Users/mahamadou.camara/Library/CloudStorage/OneDrive-KarolinskaInstitutet/Documents/Courses/Intermediate_R_Data_Science_and_Visualization_Techniques_beyong_base_R/Assignment_day_1/Assignement_1_Iris_project_day1/figures/test_plots.pdf", height = 12, width = 12)
+ggpairs(Iris_table, aes(color = Species))
+dev.off()
 
 
