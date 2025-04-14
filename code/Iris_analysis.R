@@ -39,10 +39,9 @@ Iris_table <- read.csv("/Users/mahamadou.camara/Library/CloudStorage/OneDrive-Ka
 
 Figure1 <- ggpairs(Iris_table, aes(color = Species))
 
-renv::snapshot()
-
+# Creating pdf file for the plot 
 pdf(file = "/Users/mahamadou.camara/Library/CloudStorage/OneDrive-KarolinskaInstitutet/Documents/Courses/Intermediate_R_Data_Science_and_Visualization_Techniques_beyong_base_R/Assignment_day_1/Assignement_1_Iris_project_day1/figures/test_plots.pdf", height = 12, width = 12)
 ggpairs(Iris_table, aes(color = Species))
 dev.off()
 
-
+renv::snapshot()
